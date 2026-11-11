@@ -4,9 +4,13 @@ Independent, static, LN-inspired ERP support analyst training. No real Infor sof
 
 ## Two-day path
 
-Day 1: session/table mapping, manufacturing handoff investigation, authorization triage, bounded SQL diagnostics, and blocked inventory.
+Day 1 (six cases): session/table mapping, manufacturing handoff investigation, authorization triage, bounded SQL diagnostics, blocked inventory, and a seven-stage lock/log investigation.
 
-Day 2: MES message tracing, BI freshness reconciliation, supported customization choices, UAT/change control, and L3 escalation. Finish with five interview questions and structured self-review guidance.
+Day 2 (five cases): MES message tracing, BI freshness reconciliation, supported customization choices, UAT/change control, and L3 escalation. Finish with five interview questions and structured self-review guidance. There are eleven cases in total; existing local progress uses the same stable case IDs and storage key.
+
+## Lock / log lab
+
+Open case 6, **Investigate a frozen LN session**, or use `/#locks` on the hosted project URL. It has seven sequential investigation stages, a persistent eight-section field guide with primary-source links, synthetic filterable logs, a database blocking graph, and six optional knowledge checks with explanations. Navigation rehearses the portal/application distinction, environment/company confirmation, session Properties and non-interrupting messages. It covers blocking versus deadlocks/timeouts/crashes/business errors, PID versus DB connection mapping, tracing scope/retention, administrator roles, recovery ownership, duplicate prevention and reconciliation. SQL Server-specific evidence is labeled; Oracle/cloud differences require the local runbook. No tracing, session termination, actual company switch or remote ticket submission occurs.
 
 Select a case, read its brief and evidence, select a record, enter your diagnosis, and run each action. Wrong choices receive feedback. Guided mode shows the checklist; Challenge mode hides it. Progress and interview answers stay in localStorage in the current browser/origin. Reset affects one case. Export downloads a JSON record for personal notes. Clearing browser data loses saved progress. Free-text handoff validation checks length only; interview feedback is a self-review rubric, not AI evaluation.
 
@@ -16,7 +20,7 @@ Open index.html directly, or run `python -m http.server 4173` in this directory 
 
 ## Verify
 
-Run `node test.cjs`. The test exercises all ten case completion flows, invalid answers, record selection, SQL guards, and major view rendering with a DOM stub; it does not replace visual browser QA.
+Run `node test.cjs`. The test exercises all eleven case completion flows, invalid answers, record selection, SQL guards, dynamic day/total counts, lock-stage rejection of an intermediate blocker and unbounded tracing, log filtering and guide/quiz rendering with a DOM stub; it does not replace visual browser QA.
 
 ## GitHub Pages
 
